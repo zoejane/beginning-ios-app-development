@@ -17,7 +17,7 @@ extension Hero {
             }
         }
         
-        var reverseName = String(longgestName.characters.reversed())
+        let reverseName = String(longgestName.characters.reversed())
         return reverseName
     }
     
