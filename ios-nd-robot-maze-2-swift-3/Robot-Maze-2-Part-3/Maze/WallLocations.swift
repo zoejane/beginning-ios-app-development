@@ -22,23 +22,14 @@ extension ControlCenter {
         
         switch(direction) {
         case .up:
-            if cell.top {
-                isWall = true
-            }
+            isWall = cell.top
         case .down:
-            if cell.bottom {
-                isWall = true
-            }
+            isWall = cell.bottom
         case .left:
-            if cell.left {
-                isWall = true
-            }
+            isWall = cell.left
         case .right:
-            if cell.right {
-                isWall = true
-            }
+            isWall = cell.right
         }
-        
         return isWall
     }
     
