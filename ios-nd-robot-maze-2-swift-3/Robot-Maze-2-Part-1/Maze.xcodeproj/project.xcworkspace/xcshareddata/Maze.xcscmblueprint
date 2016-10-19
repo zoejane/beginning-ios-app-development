@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : 9223372036854775807,
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D4248F67-DE1F-476F-B643-2C58DCE87ECC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : "beginning-ios-app-development\/",
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Maze",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios-nd-robot-maze-2-swift-3\/Robot-Maze-2-Part-1\/Maze.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/beginning-ios-app-development.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/flask-light.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FB920C60F19EF7B2F4ECACE34B1C809AF312E168"
+    }
+  ]
+}
