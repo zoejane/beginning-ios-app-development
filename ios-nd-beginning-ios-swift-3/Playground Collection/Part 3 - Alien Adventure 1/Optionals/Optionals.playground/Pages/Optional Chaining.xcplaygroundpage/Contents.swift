@@ -22,7 +22,7 @@ anotherImageView.image
 
 var animal = Animal(name: "Lenny", species: "lemur", tailLength: 12)
 
-//animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
+animal = Animal(name: "Gilbert", species: "Gorilla", tailLength: nil )
 
 if let tailLength = animal.tail?.length {
     print("\(animal.name)'s tail is \(tailLength) cm long")

@@ -59,7 +59,9 @@ print(reversedString, terminator: "")
 
 // Solution
 for character in stringToReverse.characters {
+    print(character)
     reversedString = "\(character)" + reversedString
+    print(reversedString)
 }
 print(reversedString, terminator: "")
 

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : 9223372036854775807,
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7599EEFB-2774-496F-80BD-5951C22042FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : "beginning-ios-app-development\/",
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Arrays",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios-nd-beginning-ios-swift-3\/Playground Collection\/Part 3 - Alien Adventure 1\/Arrays\/Arrays.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/beginning-ios-app-development.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/flask-light.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FB920C60F19EF7B2F4ECACE34B1C809AF312E168"
+    }
+  ]
+}
