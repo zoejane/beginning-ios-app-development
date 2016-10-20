@@ -27,10 +27,8 @@ extension Hero {
                 compareS2 = compareS2 + String(shuffle[indexShuffle])
             }
         }
-        if s1 == compareS1 && s2 == compareS2{
-            return true
-        }
-        return false
+      
+        return s1 == compareS1 && s2 == compareS2
     }
         
 }
