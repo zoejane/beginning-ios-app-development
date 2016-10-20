@@ -18,8 +18,11 @@ print(presidentialPetsDict)
 
 //: ### Exercise 3
 //: Remove the entry for "George Bush" and replace it with an entry for "George W. Bush".
-presidentialPetsDict["George W. Bush"] = presidentialPetsDict["George Bush"]
-presidentialPetsDict["George Bush"] = nil
+// presidentialPetsDict["George W. Bush"] = presidentialPetsDict["George Bush"]
+// presidentialPetsDict["George Bush"] = nil
+//var oldValue = presidentialPetsDict.removeValueForKey("George Bush")
+var oldValue = presidentialPetsDict.removeValue(forKey: "George Bush")
+presidentialPetsDict["George W. Bush"] = oldValue
 print(presidentialPetsDict)
 
 //: ### Exercise 4
@@ -31,6 +34,8 @@ presidentialDogs["Bill Clinton"] = "Buddy"
 //: Use subscript syntax to fill in the print statement below and produce the following string: "Michele Obama walks Bo every morning." You'll need to retrieve a value from the presidentialDogs dictionary and unwrap it using if let.
 if let dog = presidentialDogs["Barack Obama"] {
     print("Michele Obama walks \(dog) every morning.")
+} else {
+    print("No value found.")
 }
 //print("Michele Obama walks \() every morning.")
 //: ### Exercise 6
