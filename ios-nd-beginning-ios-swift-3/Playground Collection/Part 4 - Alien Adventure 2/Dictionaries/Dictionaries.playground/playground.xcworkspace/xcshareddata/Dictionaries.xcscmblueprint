@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : 9223372036854775807,
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8D000327-1D19-4F54-94C7-FEB8A640BBAB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9AE2F454EBA15159B13EFF27C70F1520044929ED" : "beginning-ios-app-development\/",
+    "FB920C60F19EF7B2F4ECACE34B1C809AF312E168" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Dictionaries",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios-nd-beginning-ios-swift-3\/Playground Collection\/Part 4 - Alien Adventure 2\/Dictionaries\/Dictionaries.playground",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/beginning-ios-app-development.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9AE2F454EBA15159B13EFF27C70F1520044929ED"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zoejane\/flask-light.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FB920C60F19EF7B2F4ECACE34B1C809AF312E168"
+    }
+  ]
+}
