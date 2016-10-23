@@ -1,33 +1,44 @@
-//: Playground - noun: a place where people can play
+enum Season: Int {
+    case fall
+    case winter
+    case spring
+    case summer
+}
 
-import UIKit
+var myFavoriteSeason = Season.fall
+var favoriteActivity = ""
 
-var str = "Hello, playground"
+func a(){print(1)}
+func b(){print(2)}
 
-var myJerseyNumber = 5
+switch myFavoriteSeason {
+case .fall: a()
+case .winter: favoriteActivity = "Winter!"
+case .spring: favoriteActivity = "Spring now!"
+case .summer: favoriteActivity = "I love summer!"
+}
 
-var myCoolVarible: Character = "a"
-
-var numberOfWheels = 4
-var inchesOfRainfall: Float = 3.5
-var attackRating: Double = 4210.50
-var letterGuessed: Character = "e"
-var secretWord = "Barnacles"
-var rainingOutside = true
-
-myJerseyNumber = 80
-
-let pi = 3.14
-
-var myFavoriteBaseballTeam = "Atlanta Braves"
-var jamesFavoriteBaseballTeam = myFavoriteBaseballTeam
-jamesFavoriteBaseballTeam = "MInnesota Twins"
-myFavoriteBaseballTeam
-
-var johnFavoriteBaseballTeam = jamesFavoriteBaseballTeam
-johnFavoriteBaseballTeam = "a"
-
-var color = "red"
-var anotherColor = color
+enum SegueIdentifier: Int {
+    case ShowPhoto
+    case NewPhoto
+    case Share
+}
 
 
+
+//var random = "Share"
+var random = 0
+
+
+let segue = SegueIdentifier(rawValue: random)
+if let segue = segue {
+    switch segue {
+    case .ShowPhoto:
+        print("Perform ShowPhoto")
+        a()
+    case .NewPhoto:
+        print("Perform NewPhoto")
+    case .Share:
+        print("Perform Share")
+    }
+}

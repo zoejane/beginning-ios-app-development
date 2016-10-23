@@ -44,5 +44,4 @@ var redJoker = Joker(color: .red, isFaceDown: false)
 redJoker.shortName
 redJoker.isFaceDown = true
 redJoker.shortName
-
 //: [Next](@next)

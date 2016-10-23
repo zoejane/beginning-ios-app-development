@@ -66,6 +66,25 @@ struct SuitedCard {
         
         return false
     }
+    
+    
+    func equalPoints(otherCard: SuitedCard) -> Bool {
+        switch value {
+        case .king, .queen, .jack, .ten:
+            return otherCard.value == value
+        default:
+            break
+        }
+        
+        switch otherCard.value {
+        case .king, .queen, .jack, .ten:
+            return value == otherCard.value
+        default:
+            break
+        }
+        return false
+    }
+    
 }
 
 //: Example use of `SuitedCard`'s computed property `suitDisplay`.
@@ -77,4 +96,6 @@ let t = SuitedCard(suit: .spades, value: .ten)
 let u = SuitedCard(suit: .spades, value: .ten)
 s.isBlackjack(otherCard: t)
 
+s.equalPoints(otherCard: t)
+t.equalPoints(otherCard: u)
 //: [Next](@next)

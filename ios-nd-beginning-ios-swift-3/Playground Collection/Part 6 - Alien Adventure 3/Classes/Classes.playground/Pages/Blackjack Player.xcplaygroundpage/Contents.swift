@@ -168,6 +168,88 @@ class BlackjackPlayer {
 class Dealer: BlackjackPlayer {
     var deck = Deck()
     // TODO: init with all players
+    let opponents: [BlackjackPlayer]
+    
+    var roundNumber = 1
+    
+    var activeOpponentIndex:Int = 0
+    
+    init(opponents: [BlackjackPlayer]) {
+        self.opponents = opponents
+    }
+    
+    func startGame() {
+        // Deal a hand to my opponents and myself.
+        for player in opponents {
+            dealTo(player: player)
+        }
+        dealTo(player: self)
+        
+        // Start with player "0"
+        activeOpponentIndex = 0
+        opponents[activeOpponentIndex].playTurn(dealer: self)
+    }
+    
+    private var lowTotal: Int {
+        var total = 0
+        for card in hand {
+            switch card.value {
+            case .ace:
+                total += 1
+            case .two:
+                total += 2
+            case .three:
+                total += 3
+            case .four:
+                total += 4
+            case .five:
+                total += 5
+            case .six:
+                total += 6
+            case .seven:
+                total += 7
+            case .eight:
+                total += 8
+            case .nine:
+                total += 9
+            case .ten, .jack, .queen, .king:
+                total += 10
+            }
+        }
+        return total
+    }
+    
+    private var highTotal: Int {
+        var total = 0
+        for card in hand {
+            switch card.value {
+            case .ace:
+                total += 1
+            case .two:
+                total += 2
+            case .three:
+                total += 3
+            case .four:
+                total += 4
+            case .five:
+                total += 5
+            case .six:
+                total += 6
+            case .seven:
+                total += 7
+            case .eight:
+                total += 8
+            case .nine:
+                total += 9
+            case .ten, .jack, .queen, .king:
+                total += 10
+            }
+        }
+        return total
+    }
+    
+    
+    
     
     func dealTo(player: BlackjackPlayer) {
         if let card = deck.cards.popLast(),
@@ -191,6 +273,8 @@ class Dealer: BlackjackPlayer {
     
     func stand(player: BlackjackPlayer) {
         // tell next player to playTurn
+        
+        
     }
 }
 

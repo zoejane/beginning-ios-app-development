@@ -43,19 +43,43 @@ class SettingsViewController: UIViewController {
     
     func addTargets() {
         print("adding targets!")
+        //you need to create three target/action pairings. 
+        //Change myButton to refer to a UI widget contained in the SettingsViewController (e.g. startGameButton).
+        //Replace myFunction with the method name that is appropriate for the event taking place.
+        //Specify the correct control event in the for parameter.
+        /*
+        myButton.addTarget(self,
+                           action: #selector(myFunction),
+                           for: .touchUpInside)
+ */
+        startGameButton.addTarget(self,
+                           action: #selector(startGame),
+                           for: .touchUpInside)
+        
+        //showBadgesSwitch.addTarget(self, action: Selector("showBadges:"), for: .valueChanged)
+        //levelSegmentedControl.addTarget(self, action: Selector("switchLevel:"), for: .valueChanged)
+        //showBadgesSwitch.addTarget(self, action: #selector(SettingsViewController.showBadges(_:)), for:.valueChanged)
+        //levelSegmentedControl.addTarget(self, action: #selector(SettingsViewController.switchLevel(_:)), for: .valueChanged)
+        showBadgesSwitch.addTarget(self, action: #selector(SettingsViewController.showBadges(switchControl:)), for: .valueChanged)
+        levelSegmentedControl.addTarget(self, action: #selector(SettingsViewController.switchLevel(segmentControl:)), for: .valueChanged)
+
     }
     
     // MARK: Implementing Actions
     
     func switchLevel(segmentControl: UISegmentedControl) {
+        Settings.Common.Level = segmentControl.selectedSegmentIndex
         print("level control has changed!")
     }
     
     func showBadges(switchControl: UISwitch) {
+        Settings.Common.ShowBadges = switchControl.isOn
         print("show badges switch has changed!")
     }
     
     func startGame() {
+        let alienAdventureViewController = self.storyboard!.instantiateViewController(withIdentifier: "AlienAdventureViewController") as! AlienAdventureViewController
+        self.present(alienAdventureViewController, animated: true, completion: nil)
         print("start button has been pressed!")
     }
 }

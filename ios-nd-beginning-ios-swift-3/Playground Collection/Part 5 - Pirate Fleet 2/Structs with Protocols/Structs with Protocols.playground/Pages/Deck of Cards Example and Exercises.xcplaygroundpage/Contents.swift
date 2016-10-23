@@ -129,6 +129,24 @@ struct SuitedCard: PlayingCard {
     }
 }
 
+// extension SuitedCard: Comparable {
+    
+//}
+
+func ==(lhs: SuitedCard, rhs: SuitedCard) -> Bool {
+    if lhs.value == rhs.value && lhs.suit == rhs.suit {
+        return true
+    }
+    return false
+}
+
+func <(lhs: SuitedCard, rhs: SuitedCard) -> Bool {
+    if lhs.value != .ace && rhs.value == .ace{
+        return true
+    }
+    return  false
+}
+
 let suits:[SuitedCard.Suit] = [.hearts, .diamonds, .clubs, .spades]
 let values:[SuitedCard.Value] = [.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .jack, .queen, .king, .ace]
 
@@ -145,8 +163,16 @@ struct Deck {
         cards.append(Joker(color: .red, isFaceDown: true))
         cards.append(Joker(color: .black, isFaceDown: true))
         
+        func dealHand() -> (PlayingCard, PlayingCard) {
+            let cardDeal1 = cards.popLast()
+            let cardDeal2 = cards.popLast()
+            return ((cardDeal1)!, (cardDeal2)!)
+        }
+        
         shuffle()
     }
+    
+    
     
     func shuffle() {
         // TODO: implement shuffle
