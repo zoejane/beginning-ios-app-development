@@ -36,3 +36,7 @@ var soups = ["tomato", "hot and sour", "french onion", "vegetable"]
 var alphabeticalSoup = soups.sorted(by: { (soup1, soup2) in
     return soup2 > soup1
 })
+
+var alphabeticalSoupAnother = soups.sorted(by: {
+    $1 > $0
+})

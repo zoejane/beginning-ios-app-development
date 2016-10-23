@@ -16,7 +16,6 @@ let bidsAsStrings = bids.map({ (bid: Int) -> String in
 let strings = bids.map({
     String($0)
 })
-
 //: Let's do the conversion again, but this time add a currency symbol.
 let bidsWithCurrency = bids.map({ (bid: Int) -> String in
     return "$\(bid)"

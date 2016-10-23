@@ -1,44 +1,23 @@
-enum Season: Int {
-    case fall
-    case winter
-    case spring
-    case summer
+enum UDPolicingError: Error {
+    case nameContainsLaser
+    case itemFromCunia
+    case valueLessThan10
 }
+var itemErrorSum = 0, nameErrorSum = 0, valueErrorSum = 0
+var errorArray = [UDPolicingError.itemFromCunia: itemErrorSum,
+                  UDPolicingError.nameContainsLaser: nameErrorSum,
+                  UDPolicingError.valueLessThan10: valueErrorSum]
 
-var myFavoriteSeason = Season.fall
-var favoriteActivity = ""
+// var errorArray = [UDPolicingError:Int]()
 
-func a(){print(1)}
-func b(){print(2)}
+// errorArray[.itemFromCunia] = 1
 
-switch myFavoriteSeason {
-case .fall: a()
-case .winter: favoriteActivity = "Winter!"
-case .spring: favoriteActivity = "Spring now!"
-case .summer: favoriteActivity = "I love summer!"
-}
+//errorArray[UDPolicingError.itemFromCunia] = Int(errorArray[.itemFromCunia]!) + 1
 
-enum SegueIdentifier: Int {
-    case ShowPhoto
-    case NewPhoto
-    case Share
-}
+// errorArray[UDPolicingError.itemFromCunia]
 
 
+itemErrorSum = 3
+errorArray
 
-//var random = "Share"
-var random = 0
-
-
-let segue = SegueIdentifier(rawValue: random)
-if let segue = segue {
-    switch segue {
-    case .ShowPhoto:
-        print("Perform ShowPhoto")
-        a()
-    case .NewPhoto:
-        print("Perform NewPhoto")
-    case .Share:
-        print("Perform Share")
-    }
-}
+errorArray[UDPolicingError.itemFromCunia].

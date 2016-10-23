@@ -14,7 +14,7 @@ let tripDebts = tripContributions.map(){ (key, value) -> String in
         return "\(key) is owed $\(-amountOwed)"
     }
 }
-
+print(tripDebts)
 
 // Here's what it looked like before with the parenthesis at the end
 let moreTripDebts = tripContributions.map({ (key, value) -> String in
