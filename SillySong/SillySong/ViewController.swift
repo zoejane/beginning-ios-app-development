@@ -24,17 +24,17 @@ class ViewController: UIViewController {
         nameField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     @IBAction func reset(_ sender: AnyObject) {
         nameField.text = ""
         lyricsView.text = ""
     }
     @IBAction func displayLyrics(_ sender: AnyObject) {
+        guard let name = nameField.text, !name.isEmpty else {
+            lyricsView.text = "Please enter your name."
+            return
+        }
+        
         lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
     }
 }
@@ -42,21 +42,14 @@ class ViewController: UIViewController {
 func shortNameFromName(name: String) -> String {
     // implementation here
     
-    var nameLowercase = name.lowercased()
+    let lowercaseName = name.lowercased()
+    let vowelSet = CharacterSet(charactersIn: "aeiou")
     
-    let nameCharactersArray = Array(nameLowercase.characters)
-    var shortName = nameCharactersArray
-    
-    let vowelArray = Array("aeiou".characters)
-    
-    var i = 0
-    // while char is a constant, remove it
-    while(!vowelArray.contains(nameCharactersArray[i])){
-        shortName.remove(at: 0)
-        i = i + 1
+    if let firstVowelRange = lowercaseName.rangeOfCharacter(from: vowelSet) {
+        return lowercaseName.substring(from: firstVowelRange.lowerBound)
     }
     
-    return String(shortName)
+    return lowercaseName
 }
 
 
