@@ -1,23 +1,48 @@
-enum UDPolicingError: Error {
-    case nameContainsLaser
-    case itemFromCunia
-    case valueLessThan10
+import UIKit
+
+func shortNameFromName(name: String) -> String {
+    // implementation here
+
+    var nameLowercase = name.lowercased()
+    
+    let nameCharactersArray = Array(nameLowercase.characters)
+    var shortName = nameCharactersArray
+    
+    let vowelArray = Array("aeiou".characters)
+    
+    var i = 0
+    // while char is a constant, remove it
+    while(!vowelArray.contains(nameCharactersArray[i])){
+        shortName.remove(at: 0)
+        i = i + 1
+    }
+
+    return String(shortName)
 }
-var itemErrorSum = 0, nameErrorSum = 0, valueErrorSum = 0
-var errorArray = [UDPolicingError.itemFromCunia: itemErrorSum,
-                  UDPolicingError.nameContainsLaser: nameErrorSum,
-                  UDPolicingError.valueLessThan10: valueErrorSum]
 
-// var errorArray = [UDPolicingError:Int]()
+shortNameFromName(name: "Nate")
+// Shows 'ate'
+shortNameFromName(name: "Talia")
+// Shows 'alia'
 
-// errorArray[.itemFromCunia] = 1
+let bananaFanaTemplate = [
+    "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
+    "Banana Fana Fo F<SHORT_NAME>",
+    "Me My Mo M<SHORT_NAME>",
+    "<FULL_NAME>"].joined(separator: "\n")
 
-//errorArray[UDPolicingError.itemFromCunia] = Int(errorArray[.itemFromCunia]!) + 1
+func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
+    
+    let shorName = shortNameFromName(name: fullName)
+    
+    let lyric = lyricsTemplate
+        .replacingOccurrences(of: "<FULL_NAME>", with: fullName)
+        .replacingOccurrences(of: "<SHORT_NAME>", with: shorName)
 
-// errorArray[UDPolicingError.itemFromCunia]
+    return lyric
+}
 
 
-itemErrorSum = 3
-errorArray
+lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: "Zoe")
 
-errorArray[UDPolicingError.itemFromCunia].
+
