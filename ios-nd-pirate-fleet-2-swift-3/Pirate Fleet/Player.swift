@@ -218,7 +218,6 @@ class Player {
                 
                 var shipLocation = RandomGridLocation()
                 var vertical = Int(arc4random_uniform(UInt32(2))) == 0 ? true : false
-                 //var ship = Ship(length: shipLength, location: shipLocation, isVertical: vertical, isWooden: false, hitTracker: HitTracker())
                 var ship = Ship(length: shipLength, location: shipLocation, isVertical: vertical)
                 
                 while !gridViewController.addShip(ship, playerType: .computer) {
@@ -233,11 +232,9 @@ class Player {
         for _ in 0..<numberOfMines {
             var location = RandomGridLocation()
             var mine = Mine(location: location)
-            //var mine = Mine(location: location, guarenteesHit: false, penaltyText: "Mine!!!")
             while !gridViewController.addMine(mine, playerType: .computer) {
                 location = RandomGridLocation()
                 mine = Mine(location: location)
-                //mine = Mine(location: location, guarenteesHit: false, penaltyText: "Mine!!!")
             }
         }
         
